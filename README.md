@@ -7,7 +7,7 @@ Message based, event driven web apps in ruby
 
 Add this line to your application's Gemfile:
 
-    gem 'GrapeApe'
+    gem 'grapeape'
 
 And then execute:
 
@@ -15,7 +15,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install GrapeApe
+    $ gem install grapeape
 
 ## Usage
 
