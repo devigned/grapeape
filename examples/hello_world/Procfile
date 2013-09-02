@@ -1,0 +1,2 @@
+web: bundle exec api.rb
+worker: bundle exec worker.rb
