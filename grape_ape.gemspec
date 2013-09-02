@@ -26,6 +26,7 @@ AMQP. AMQP is used to route messages from to a collection of event driven worker
   s.add_development_dependency 'bundler', '~> 1.3'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rack-test'
 
   s.add_dependency 'goliath'
   s.add_dependency 'grape'

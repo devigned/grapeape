@@ -6,4 +6,5 @@ require 'grape_ape/version'
 module GrapeApe
   autoload :API,            'grape_ape/api'
   autoload :Dispatcher,     'grape_ape/dispatcher'
+  autoload :Endpoint,       'grape_ape/endpoint'
 end

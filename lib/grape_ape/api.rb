@@ -1,7 +1,5 @@
 module GrapeApe
   class API < Grape::API
-    include GrapeApe::Dispatcher
-
     REQUIRED_ROUTE_KEYS = [:worker, :method]
 
      class << self
@@ -13,7 +11,7 @@ module GrapeApe
               :route_options => (@namespace_description || {}).deep_merge(@last_description || {}).deep_merge(route_options || {})
           }
 
-          endpoints << Grape::Endpoint.new(settings.clone, endpoint_options) do
+          endpoints << GrapeApe::Endpoint.new(settings.clone, endpoint_options) do
             message = rpc(env, route_options[:worker], {method: route_options[:method], params: params})
             if block
               block.call(message)

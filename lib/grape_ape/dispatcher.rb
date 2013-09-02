@@ -1,6 +1,6 @@
 module GrapeApe
   module Dispatcher
-    def rpc(env, queue_name, message = {}, &block)
+    def rpc(env, queue_name, message = {})
       f = Fiber.current
       response = nil
       env['subscription'] = env.channel.subscribe do |msg|
