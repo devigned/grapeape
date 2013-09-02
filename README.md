@@ -1,6 +1,9 @@
 # GrapeApe
 
-Message based, event driven web apps in ruby
+Message based, event driven web dsl in ruby. The project stands up an event driven web (goliath / grape) dsl backed by
+AMQP. AMQP is used to route messages from the web to a collection of event driven worker processes in an RPC flow.
+
+This could be used to set up a quick [CQRS](http://martinfowler.com/bliki/CQRS.html) architecture.
 
 ## This is completely WIP, and will be changing rapidly....
 
