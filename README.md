@@ -1,7 +1,8 @@
 # GrapeApe
-========
 
 Message based, event driven web apps in ruby
+
+## This is completely WIP, and will be changing rapidly....
 
 ## Installation
 
