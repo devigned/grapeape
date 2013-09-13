@@ -11,7 +11,7 @@ describe GrapeApe::API do
   def app;
     subject
   end
-
+``
   describe '.route' do
     let(:ape_options) { {worker: 'blah', method: 'hello'} }
 
