@@ -1,8 +1,17 @@
+require 'active_support/core_ext/class/attribute'
+
 module GrapeApe
   class API < Grape::API
     REQUIRED_ROUTE_KEYS = [:worker, :method]
 
-     class << self
+    cattr_accessor :app_class
+
+    class << self
+      def inherited(subclass)
+        super
+        GrapeApe::API.app_class = subclass.name if defined?(GrapeApe::API)
+      end
+
       def route(methods, paths = %w(/), route_options = {}, &block)
         if ape_route?(route_options)
           endpoint_options = {

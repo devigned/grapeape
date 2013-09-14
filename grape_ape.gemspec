@@ -33,4 +33,5 @@ This could be used to set up a quick [CQRS](http://martinfowler.com/bliki/CQRS.h
   s.add_dependency 'goliath'
   s.add_dependency 'grape'
   s.add_dependency 'amqp'
+  s.add_dependency 'activesupport'
 end
