@@ -1,2 +1,2 @@
-web: bundle exec api.rb
-worker: bundle exec worker.rb
+web: bundle exec ruby api.rb -sv
+worker: bundle exec ruby worker.rb

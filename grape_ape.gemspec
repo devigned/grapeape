@@ -29,6 +29,7 @@ This could be used to set up a quick [CQRS](http://martinfowler.com/bliki/CQRS.h
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rack-test'
+  s.add_development_dependency 'em-http-request'
 
   s.add_dependency 'goliath'
   s.add_dependency 'grape'
