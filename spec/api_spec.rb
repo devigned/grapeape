@@ -13,7 +13,7 @@ describe GrapeApe::API do
   end
 
   describe '.route' do
-    let(:ape_options) { {worker: 'blah', method: 'hello'} }
+    let(:ape_options) { {routing_key: 'blah', method: 'hello'} }
 
     it 'should ask if the route is an ape route' do
       described_class.should_receive(:ape_route?).with(hash_including(ape_options)).and_return(true)

@@ -2,7 +2,7 @@ require 'goliath/test_helper'
 
 module GrapeApe
   module TestHelper
-    include Goliath::TestHelper
+    include ::Goliath::TestHelper
 
     # Wrapper for launching API and executing given code block. This
     # will start the EventMachine reactor running.
@@ -25,10 +25,10 @@ module GrapeApe
     def server(api, port, options = {}, &blk)
       op = OptionParser.new
 
-      s = Goliath::Server.new
+      s = GrapeApe::Goliath::Server.new
       s.logger = setup_logger(options)
       s.api = api
-      s.app = Goliath::Rack::Builder.build(api.class, s.api)
+      s.app = ::Goliath::Rack::Builder.build(api.class, s.api)
       s.api.options_parser(op, options)
       s.options = options
       s.port = port
