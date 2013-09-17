@@ -1,8 +1,9 @@
 require 'goliath'
+require 'goliath/api'
 require 'goliath/websocket'
 
 module GrapeApe
-  class Server < Goliath::API
+  class Server < ::Goliath::API
     def initialize(opts = {})
       @api = opts.delete(:api)
     end

@@ -1,5 +1,8 @@
-require 'grape_ape/api'
-require 'grape_ape/server'
+require 'goliath'
+require 'goliath/websocket'
+require 'grape_ape'
+require 'grape_ape/goliath/server'
+require 'grape_ape/goliath/runner'
 
 Goliath::Application.module_eval do
 
@@ -30,10 +33,11 @@ Goliath::Application.module_eval do
         raise NameError, "Class #{@app_class} not found."
       end
 
-      runner = Goliath::Runner.new(ARGV, api)
+      runner = GrapeApe::Goliath::Runner.new(ARGV, api)
       runner.app = Goliath::Rack::Builder.build(GrapeApe::Server, api)
 
       runner.load_plugins(GrapeApe::Server.plugins)
+
       runner.run
     else
       super_run!

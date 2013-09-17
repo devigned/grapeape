@@ -1,8 +1,9 @@
 require 'active_support/core_ext/class/attribute'
+require 'grape_ape/goliath/application_patch'
 
 module GrapeApe
   class API < Grape::API
-    REQUIRED_ROUTE_KEYS = [:worker, :method]
+    REQUIRED_ROUTE_KEYS = [:routing_key, :method]
 
     cattr_accessor :app_class
 
@@ -21,7 +22,7 @@ module GrapeApe
           }
 
           endpoints << GrapeApe::Endpoint.new(settings.clone, endpoint_options) do
-            message = rpc(env, route_options[:worker], {method: route_options[:method], params: params})
+            message = rpc(env, route_options[:routing_key], {method: route_options[:method], params: params})
             if block
               block.call(message)
             else
