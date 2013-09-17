@@ -41,8 +41,16 @@ module GrapeApe
         end
       end
 
+      def stop
+        logger.info('Stopping server...')
+        config['grape_amqp_conn'].close { EM.stop }
+      end
+
       def setup_amqp
-        config['grape_amqp_conn'] = AMQP.connect
+        config['grape_amqp_conn'] = AMQP.connect(on_possible_authentication_failure: Proc.new { |settings|
+          logger.info "Authentication failed, as expected, settings are: #{settings.inspect}"
+          EM.stop
+        })
         config['grape_amqp_channel'] = AMQP::Channel.new(config['grape_amqp_conn'])
         config['grape_amqp_exchange'] = config['grape_amqp_channel'].default_exchange
         config['grape_amqp_response_queue'] = SecureRandom.uuid
