@@ -1,6 +1,6 @@
 # GrapeApe
 
-[![Code Climate](https://codeclimate.com/repos/52387ad7c7f3a33abf011d52/badges/161ce3fe2123adb6b6c9/gpa.png)](https://codeclimate.com/repos/52387ad7c7f3a33abf011d52/feed)
+[![Code Climate](https://codeclimate.com/github/devigned/grapeape.png)](https://codeclimate.com/github/devigned/grapeape)
 
 Message based, event driven web dsl in ruby. The project stands up an event driven web (goliath / grape) dsl backed by
 AMQP. AMQP is used to route messages from the web to a collection of event driven worker processes in an RPC flow.
