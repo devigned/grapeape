@@ -31,6 +31,7 @@ This could be used to set up a quick [CQRS](http://martinfowler.com/bliki/CQRS.h
   s.add_development_dependency 'rack-test'
   s.add_development_dependency 'em-http-request'
   s.add_development_dependency 'coveralls'
+  s.add_development_dependency 'evented-spec'
 
   s.add_dependency 'goliath'
   s.add_dependency 'grape'

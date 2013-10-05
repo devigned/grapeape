@@ -9,6 +9,8 @@ require 'grape_ape'
 require 'rubygems'
 require 'bundler'
 require 'rack/test'
+require 'goliath/test_helper'
+require 'evented-spec'
 Bundler.setup :default, :test
 
 Dir["#{File.dirname(__FILE__)}/support/*.rb"].each do |file|
@@ -18,4 +20,5 @@ end
 RSpec.configure do |config|
   config.order = 'random'
   config.include Rack::Test::Methods
+  config.include Goliath::TestHelper
 end
