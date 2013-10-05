@@ -2,7 +2,7 @@
 
 Each example run `bundle install` and then run `bundle exec foreman start`.
 
-Note: You will need to have an instance of AMQP running (for example, (rabbitmq)[http://www.rabbitmq.com/]).
+Note: You will need to have an instance of AMQP running (for example, [rabbitmq](http://www.rabbitmq.com/)).
 
 ## Examples
 
