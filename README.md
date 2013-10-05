@@ -27,7 +27,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Usage instructions are upcoming. For usage examples, please see our [examples](examples).
 
 ## Contributing
 
