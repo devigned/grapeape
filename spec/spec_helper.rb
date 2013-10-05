@@ -2,10 +2,10 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'support'))
 
+require 'coveralls'
+Coveralls.wear!
+
 require 'grape_ape'
-
-# require 'grape-entity'
-
 require 'rubygems'
 require 'bundler'
 require 'rack/test'
