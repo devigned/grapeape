@@ -4,12 +4,12 @@
 [![Build Status](https://travis-ci.org/devigned/grapeape.png)](https://travis-ci.org/devigned/grapeape)
 [![Coverage Status](https://coveralls.io/repos/devigned/grapeape/badge.png?branch=master)](https://coveralls.io/r/devigned/grapeape?branch=master)
 
-Message based, event driven web dsl in ruby. The project stands up an event driven web (goliath / grape) dsl backed by
-AMQP. AMQP is used to route messages from the web to a collection of event driven worker processes in an RPC flow.
+Eventmachine driven distributed web API in ruby. The project stands up an event driven web API
+([goliath](http://postrank-labs.github.io/goliath/) / [grape](http://intridea.github.io/grape/)) backed by
+[AMQP](http://www.amqp.org/). AMQP is used to route messages from the web to a collection of event driven worker
+processes in an RPC flow.
 
-This could be used to set up a quick [CQRS](http://martinfowler.com/bliki/CQRS.html) architecture.
-
-## This is completely WIP, and will be changing rapidly....
+Note: this is not ready for primetime
 
 ## Installation
 
