@@ -6,6 +6,9 @@ require 'coveralls'
 Coveralls.wear!
 
 require 'grape_ape'
+require 'grape_ape/goliath/runner'
+require 'grape_ape/goliath/server'
+require 'grape_ape/goliath/application_patch'
 require 'rubygems'
 require 'bundler'
 require 'rack/test'
