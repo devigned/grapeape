@@ -3,6 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/devigned/grapeape.png)](https://codeclimate.com/github/devigned/grapeape)
 [![Build Status](https://travis-ci.org/devigned/grapeape.png)](https://travis-ci.org/devigned/grapeape)
 [![Coverage Status](https://coveralls.io/repos/devigned/grapeape/badge.png?branch=master)](https://coveralls.io/r/devigned/grapeape?branch=master)
+[![Dependency Status](https://gemnasium.com/devigned/grapeape.png)](https://gemnasium.com/devigned/grapeape)
 
 Eventmachine driven distributed web API in ruby. The project stands up an event driven web API
 ([goliath](http://postrank-labs.github.io/goliath/) / [grape](http://intridea.github.io/grape/)) backed by
